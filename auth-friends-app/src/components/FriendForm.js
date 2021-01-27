@@ -32,33 +32,43 @@ const FriendForm = (props) => {
     }
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>Name</label>
-                <input
-                    type='text'
-                    name='name'
-                    value={formValues.name}
-                    onChange={handleChange}
-                    placeholder='Enter friend name'
-                />
-                <label>Age</label>
-                <input
-                    type='text'
-                    name='age'
-                    value={formValues.age}
-                    onChange={handleChange}
-                    placeholder='Enter friend age'
-                />
-                <label>Email</label>
-                <input
-                    type='email'
-                    name='email'
-                    value={formValues.email}
-                    onChange={handleChange}
-                    placeholder='Enter friend email'
-                />
-                <button>Submit</button>
+        <div className='form-container'>
+            <form onSubmit={handleSubmit} className='form'>
+                <h1>Add a new friend here!</h1>
+                <div className='form-inputs'>
+                    <label className='form-label'>Name</label>
+                    <input
+                        className='form-input'
+                        type='text'
+                        name='name'
+                        value={formValues.name}
+                        onChange={handleChange}
+                        placeholder='Enter friend name'
+                    />
+                </div>
+                <div className='form-inputs'>
+                    <label className='form-label'>Age</label>
+                    <input
+                        className='form-input'
+                        type='text'
+                        name='age'
+                        value={formValues.age}
+                        onChange={handleChange}
+                        placeholder='Enter friend age'
+                    />
+                </div>
+                <div className='form-inputs'>
+                    <label className='form-label'>Email</label>
+                    <input
+                        className='form-input'
+                        type='email'
+                        name='email'
+                        value={formValues.email}
+                        onChange={handleChange}
+                        placeholder='Enter friend email'
+                    />
+                </div>
+                <button className='form-input-btn'>Submit</button>
             </form>
         </div>
     )

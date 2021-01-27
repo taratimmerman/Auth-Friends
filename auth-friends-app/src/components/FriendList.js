@@ -22,17 +22,19 @@ const FriendList = () => {
   }, []);
 
   return (
-    <div>
-        <FriendForm setFriends={setFriends}/>
-      {friends.map((friend) => {
-        return (
-          <div key={friend.id}>
-            <h3>{`${friend.name}, ${friend.age}`}</h3>
-            <p>{`Email: ${friend.email}`}</p>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <FriendForm setFriends={setFriends} />
+      <div className='friends-container'>
+        {friends.map((friend) => {
+          return (
+            <div key={friend.id} className='friend-card'>
+              <h3>{`${friend.name}, ${friend.age}`}</h3>
+              <p>{`Email: ${friend.email}`}</p>
+            </div>
+          );
+        })}
+      </div>
+    </>
   );
 };
 
